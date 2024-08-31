@@ -9,6 +9,8 @@ Before running the Terraform scripts, ensure you have the following installed an
 - [Terraform](https://www.terraform.io/downloads) (version 1.9.5 or later)
 - [AWS CLI](https://aws.amazon.com/cli/) configured with your credentials and region
 - An AWS account with permissions to create ECS, RDS, and networking resources
+- Create and upload the docker image to AWS ECR
+- Use the sample flask application github to create docker image https://github.com/LondheShubham153/two-tier-flask-app/tree/master
 
 ## Execution Steps
 
