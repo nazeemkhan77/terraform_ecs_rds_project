@@ -1,0 +1,12 @@
+aws_region         = "us-west-2"
+aws_profile        = "eks"
+app_name           = "demo-app"
+vpc_id             = "vpc-02b36a8b9711d143e"
+subnets_ecs        = ["subnet-06e10b9db16313a8a","subnet-0ba8bac079c4d04f8"]
+rds_engine_version = "8.0.33"
+rds_instance_class = "db.t2.micro"
+db_name            = "mydb"
+db_username        = "admin"
+db_password        = "YourPassword123"
+subnets_rds        = ["subnet-02b1705dcc3fefb55", "subnet-01a4d74ea15fb26fe"]
+ecs_image          = "579142349015.dkr.ecr.us-west-2.amazonaws.com/default/docker-images:two-tier-flask-app"
