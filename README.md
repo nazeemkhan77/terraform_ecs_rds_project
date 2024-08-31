@@ -23,7 +23,9 @@ Before running the Terraform scripts, ensure you have the following installed an
 
 2. **Modify `terraform.tfvars`**
 
-    Edit the `terraform.tfvars` file to adjust the variables for your deployment:
+   Using terraform.tfvars files to manage configurations per environment is a common practice in Terraform. This approach allows you to define different variables for each environment (e.g., development, staging, production) without modifying the main Terraform scripts. When you run Terraform commands, it automatically loads this file and uses the values defined in it. You can create different tfvars files for different environments, and specify which one to use when executing Terraform commands.
+
+   Edit the `terraform.tfvars` file to adjust the variables for your deployment:
 
     ```bash
     vim terraform.tfvars
@@ -42,21 +44,21 @@ Before running the Terraform scripts, ensure you have the following installed an
     - `db_username`: The master username for the RDS (e.g., `admin`)
     - `db_password`: The master password for the RDS (e.g., `YourPassword123`)
     - `subnets_rds`: Provide a list of subnets where RDS cluster will be created (e.g., ["subnet-xxx", "subnet-yyy"] )
-    - `ecs_image`: The Docker image to deploy (e.g., `two-tier-flask-app`)
+    - `ecs_image`: Elatic Container Registry docker imaga URL (e.g., `579142349015.dkr.ecr.us-west-2.amazonaws.com/default/docker-images:two-tier-flask-app`)
 
-3. **Initialize Terraform**
+4. **Initialize Terraform**
 
     ```bash
     terraform init
     ```
 
-4. **Plan the Deployment**
+5. **Plan the Deployment**
 
     ```bash
     terraform plan
     ```
 
-5. **Apply the Terraform Configuration**
+6. **Apply the Terraform Configuration**
 
     ```bash
     terraform apply
@@ -64,11 +66,11 @@ Before running the Terraform scripts, ensure you have the following installed an
 
     Confirm the creation of resources by typing `yes` when prompted.
 
-6. **Retrieve Outputs**
+7. **Retrieve Outputs**
 
     After the deployment, Terraform will output key information like the ECS service's public IP and the RDS endpoint. Note these for accessing your service.
 
-7. **Verify the Deployment**
+8. **Verify the Deployment**
 
     Ensure that the ECS service is running and accessible by navigating to the public IP or DNS name provided by Terraform.
 
