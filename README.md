@@ -6,7 +6,7 @@ This README provides instructions on how to execute the Terraform scripts to dep
 
 Before running the Terraform scripts, ensure you have the following installed and configured:
 
-- [Terraform](https://www.terraform.io/downloads) (version 0.12 or later)
+- [Terraform](https://www.terraform.io/downloads) (version 1.9.5 or later)
 - [AWS CLI](https://aws.amazon.com/cli/) configured with your credentials and region
 - An AWS account with permissions to create ECS, RDS, and networking resources
 
